@@ -20,7 +20,7 @@ To set up AquaBill on your local environment, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/Aqua-Bill.git
-   install requirements.txt
+   pip install requirements.txt
 
 
 ## Usage
