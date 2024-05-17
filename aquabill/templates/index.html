@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquabill</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+
+    {% load static %}
+    <link rel="stylesheet" href="../static/css/newStyle.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/js/script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0 d-flex">
+      <div
+        id="bdSidebar"
+        class="d-flex flex-column flex-shrink-0 p-3 text-white offcanvas-md offcanvas-start"
+      >
+        <a href="#" class="navbar-brand"
+          ><img
+            src="../static/imgs/logo.png"
+            width="60"
+            height="60"
+            alt="Aquabill"
+        /></a>
+        <hr />
+        <ul class="mynav nav nav-pills flex-column mb-auto">
+          <li class="nav-item mb-1" id="home">
+            <a href="#">
+              <i class="fs-4 bi-house"></i>
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item mb-1" id="features">
+            <a href="#">
+              <i class="bi bi-info-circle"></i>
+              Features
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+
+      <div class="bg-light flex-fill">
+        <div
+          class="p-2 d-md-none d-flex text-white"
+          style="background-color: #4975dd"
+        >
+          <a
+            href="#"
+            class="text-white"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#bdSidebar"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <span class="ms-3">Aquabill</span>
+        </div>
+        <div id="content" style="background-color: #ffffff">
+          <div class="p-4">
+            <div class="card-lg">
+              <i
+                class="bi bi-bell"
+                style="font-size: large; cursor: pointer; color: #4975dd"
+                id="notification"
+              ></i>
+              <ul class="menu" id="nots" style="display: none"></ul>
+              <div class="main-card-cont">
+                <h3 class="item1">Welcome to Aquabill</h3>
+                <h5 class="item2" id="date-time"></h5>
+                <p class="item1">Where we revolutionize water billing</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="card-sm">
+              <h4><i class="bi bi-droplet card-icon"></i> Water Consumption</h4>
+              <h5 id="reading">{{reading}} Liters consumed today</h5>
+            </div>
+            <div class="card-sm">
+              <h4><i class="bi bi-cash"></i> Water Price</h4>
+              <h5 id="price">{{price}} SAR charged today</h5>
+            </div>
+          </div>
+          <div class="p-4" style="justify-content: center">
+            <div class="card-md" style="justify-content: center">
+              <h4><i class="bi bi-moisture"></i> Water Quality</h4>
+              <div id="prg">
+                <div class="quality-bar" id="container"></div>
+                <p
+                  style="margin-left: 12.5%; font-size: 1em; font-weight: bold"
+                >
+                  90% drinkable water
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="card-lg" id="chart-holder">
+              <i
+                class="bi bi-caret-down-fill"
+                id="menu-arr"
+                style="color: white; cursor: pointer"
+              ></i>
+              <ul class="menu" id="menu-chart" style="display: none">
+                <li><span id="daily">Daily</span></li>
+                <li><span id="monthly">Monthly</span></li>
+              </ul>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const value = 0.9;
+
+      var bar = new ProgressBar.SemiCircle(container, {
+        strokeWidth: 6,
+        color: "#618ffb",
+        trailColor: "#618ffb",
+        trailWidth: 1,
+        easing: "easeInOut",
+        duration: 1400,
+        svgStyle: null,
+        text: {
+          value: value,
+          alignToBottom: false,
+        },
+        from: { color: "#618ffb" },
+        to: { color: "#618ffb" },
+        // Set default step function for all animate calls
+        step: (state, bar) => {
+          bar.path.setAttribute("stroke", state.color);
+          var value = Math.round(bar.value() * 100);
+          if (value === 0) {
+            bar.setText("");
+          } else {
+            bar.setText("");
+          }
+
+          bar.text.style.color = state.color;
+        },
+      });
+      bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+      bar.text.style.fontSize = "1em";
+
+      bar.animate(0.9); // Number from 0.0 to 1.0
+    </script>
+  </body>
+</html>

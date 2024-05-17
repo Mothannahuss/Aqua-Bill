@@ -1,0 +1,332 @@
+#sidebar
+{
+    background-color: #4975dd !important;
+    width: 15% !important;
+    #sidebar {
+        flex-direction: row; /* Switch to horizontal layout */
+        align-items: center; /* Center items vertically within the sidebar */
+        justify-content: start; /* Align items to the start of the sidebar */
+        width: 100%; /* Full width to span the top of the screen */
+        height: 10vh; /* Set height to 10% of the viewport height */
+        padding: 0 20px; /* Adjust horizontal padding if needed */
+        position: fixed; /* Fixed position at the top */
+        top: 0; /* Stick to the top */
+        left: 0; /* Align to the left */
+        z-index: 1000; /* Ensure it stays on top of other content */
+        background-color: #4975dd; /* Background color for visibility */
+      }
+    
+      #sidebar .nav {
+        flex-direction: row; /* Change the direction of the nav */
+        width: 100%; /* Ensure full width */
+      }
+    
+      #sidebar .nav-link, #sidebar .nav-link span {
+        display: inline; /* Make sure links and text are always visible */
+      }
+    
+      #sidebar .nav-link {
+        padding: 8px 15px; /* Adjust padding */
+        flex-grow: 1; /* Ensures links spread out evenly */
+        text-align: center; /* Center text within each link */
+      }
+    
+      .fs-5, .ms-1 { /* Overrides for specific utility classes */
+        display: inline !important; /* Force display */
+      }
+}
+
+body
+{
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.mynav {
+    color: #fff;
+  }
+
+  .mynav li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 8px 5px;
+  }
+
+  .mynav li a.active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .mynav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .mynav li a i {
+    width: 25px;
+    text-align: center;
+  }
+
+li span
+{
+    font-size: 1.25em;
+    color: white;
+}
+li i
+{
+    color: white;
+}
+
+#myChart {
+    /* background-color: #EAEFFB; */
+    width: 100%;
+}
+
+
+#chart-holder
+{
+    height: auto;
+}
+
+
+.container
+{
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background-color: #527ad8 !important; */
+    border: 1px solid transparent !important;
+    border-radius: 4px;
+    position: absolute;
+    background-color: rgba(69, 69, 69, 0.3) !important; /* White background with 70% opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  }
+  
+
+
+  .menu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+    border-bottom:none !important;
+  }
+  
+  .menu li:last-child a {
+    border-bottom: none;
+  }
+
+.card-lg
+{
+    width: 50vw;
+    height: 38vh;
+    border-radius: 25px;
+    /* background-image: url("../images/5.webp"); */
+    background-color: #9bb8fc;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-lg-features
+{
+    width: 40vw;
+    height: 40vh;
+    border-radius: 25px;
+    /* background-image: url("../images/5.webp"); */
+    background-color: #9bb8fc;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.features-card
+{
+
+    width: 25vw;
+    height: 18vh;
+    border-radius: 25px;
+    background-color: #9bb8fc;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.card-sm {
+    width: 22.5vw;  /* Match the width of card-lg */
+    height: 20vh; /* Shorter height */
+    border-radius: 25px;
+    background-color: #9bb8fc; /* Slightly different color for distinction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Space between card-lg and card-sm */
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+.card-icon
+{
+    color: #769cf5;
+}
+
+
+.not-card
+{
+    width: 25vw;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: #9bb8fc;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.4em;
+
+}
+
+.circle
+{
+    width: 40px;
+    height: 40px;
+    background-color: #adc5fc;
+    border-radius: 50px;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.sidebar {
+    background-color: #4975dd;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.menu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #eee;
+}
+
+.menu li:last-child a {
+    border-bottom: none;
+}
+
+.card-lg, .card-sm, .not-card {
+    border-radius: 25px;
+    background-color: #9bb8fc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-lg {
+    width: 50vw;
+    height: 38vh;
+}
+
+.card-sm {
+    width: 22.5vw;
+    height: 20vh;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.not-card {
+    width: 25vw;
+    height: 50vh;
+}
+
+.notification
+{
+    padding: 5% 0;
+    
+}
+.notification svg
+{
+    width: 7.5%;
+}
+
+.lightning
+{
+    color: #FFC107;
+}
+.not-card i
+{
+    color: #769cf5;
+}
+.main-card-cont
+{
+    margin-top: 7.5em;
+    color: white;
+    display: grid;
+    columns: 2;
+    justify-content: space-between;
+}
+.item1
+{
+    grid-column: 1;
+
+}
+.item2
+{
+    grid-column: 2;
+}
+
+
+
+@media (max-width: 768px) {
+    
+  
+    .card-lg, .card-sm {
+      width: 100%;
+    }
+
+    .card-lg{
+        margin-top: 25%;
+    }
+  
+    #menu {
+      display: none; /* Hide the sidebar menu on small screens */
+    }
+    /* #sidebar .nav-link {
+        display: block !important; 
+        padding: 2px 10px !important;
+      } */
+  }
+  
+  /* Ensure the chart canvas is responsive */
+  #myChart {
+    aspect-ratio: 16 / 9; /* Maintain a specific aspect ratio */
+  }
+  
