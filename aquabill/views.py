@@ -92,11 +92,11 @@ def update_devices(request):
         return JsonResponse({'status': 'error', 'message': 'Bad request'}, status=400)
 
 def index(request):
-    if request.method == 'GET':
-        devices = Device.objects.all()
-        for i in devices:
-            i.current_read = 0
-            i.save()
+    # if request.method == 'GET':
+    #     devices = Device.objects.all()
+    #     for i in devices:
+    #         i.current_read = 0
+    #         i.save()
         
         return render(request, 'index.html',{'reading':0, 'price':0, 'error':False})
 
