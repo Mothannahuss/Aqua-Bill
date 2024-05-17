@@ -224,7 +224,6 @@ document.addEventListener('DOMContentLoaded', function () {
         data.forEach(month => {
             let reading = month[0];
             let day_name = month[1];
-            console.log(reading, day_name);
 
 
             let index = month_data.indexOf(day_name);
@@ -364,7 +363,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 {
                     todaysReading = data['reading'];
                     readings[readings.length - 1] = todaysReading;
-                    console.log(readings);
                     myChart.update();
                 }
             
@@ -415,7 +413,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function optionSelected(e) {
         let value = e.target.innerText;
-        console.log(value);
         document.querySelector('#menu-chart').style.display = 'none';
         if (value == "Daily") {
             date_data = getLastSevenDays().reverse();
