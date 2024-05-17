@@ -1,0 +1,7 @@
+venv
+.vscode
+.history
+/aquabill/migrations
+/aquabill/__pycache__
+/seniorDesign/__pycache__
+*.sqlite3

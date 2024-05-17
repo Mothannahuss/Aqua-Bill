@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-q=g^g*cx2izn2x0*1hgzd+_3p1c_ejpty!f!-vks2554m=%szv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["172.20.10.3","127.0.0.1","172.20.10.4"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 AUTH_USER_MODEL = 'aquabill.User'
 
